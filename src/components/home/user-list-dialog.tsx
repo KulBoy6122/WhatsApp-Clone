@@ -42,8 +42,9 @@ const UserListDialog = () => {
 
             let conversationId;
             if(!isGroup){
+		    if (!me?._id) return;
                 conversationId=await createConversation({
-                    participants:[...selectedUsers,me?._id],
+                    participants:[...selectedUsers,me._id],
                     isGroup:false
                 })
             }else{
