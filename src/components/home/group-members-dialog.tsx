@@ -28,7 +28,7 @@ const GroupMembersDialog = ({selectedConversation}:GroupMembersDialogProps) => {
 					<DialogTitle className='my-2'>Current Members</DialogTitle>
 					<DialogDescription>
 						<div className='flex flex-col gap-3 '>
-							{users?.map((user: { _id: Key | null | undefined; isOnline: any; image: string | undefined; name: any; email: string; }) => (
+							{users?.map((user: { _id: Key | null | undefined; isOnline: any; image: string | undefined; name?: any; email: string; }) => (
 								<div key={user._id} className={`flex gap-3 items-center p-2 rounded`}>
 									<Avatar className='overflow-visible'>
 										{user.isOnline && (
